@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url(./assets/fonts/Manrope-Regular.ttf);
+}
+
+// переменные
+@mixin header-font {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+  color: #2A2A2A;
+  letter-spacing: 0.02em;
+}
+
+@mixin nav-font {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2A2A2A;
+}
+
+
+
+
+@media (min-width: 993px) {}
+
+@media (max-width: 992px) {}
