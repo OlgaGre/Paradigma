@@ -3,28 +3,91 @@
   src: url(./assets/fonts/Manrope-Regular.ttf);
 }
 
+@function vw($value, $size: 1920) {
+  @return $value / $size * 100vw;
+}
+
 // переменные
 @mixin header-font {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
-  font-size: 11px;
-  line-height: 20px;
+  font-size: vw(11);
+  line-height: vw(20);
   color: #2A2A2A;
   letter-spacing: 0.02em;
 }
 
-@mixin nav-font {
+@mixin menu-font {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: vw(12);
+  line-height: vw(16);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #2A2A2A;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "A H"
+    "A M";
+  grid-template-columns: vw(140) 1fr;
+}
+
+aside {
+  grid-area: A;
+}
+
+main {
+  grid-area: M;
+  background-image: url('./assets/svg/bg.svg');
+}
+
+header {
+  grid-area: H;
+  display: grid;
+
+  .logo {
+    width: vw(370);
+    display: flex;
+    justify-content: space-between;
+    margin-right: vw(65);
+    @include header-font();
+
+    img {
+      width: vw(213);
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    @include header-font();
+    align-items: center;
+
+    nav {
+      display: flex;
+
+      .header-nav-items {
+        margin-right: vw(57);
+        display: flex;
+      }
+    }
+  }
+  .menu{
+  display: flex;
+  justify-content: space-between;
+  .menu-item{
+    @include  menu-font();
+  }
+  }
+}
 
 
 

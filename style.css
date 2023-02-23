@@ -1,1 +1,76 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Manrope";
+  src: url(./assets/fonts/Manrope-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "A H" "A M";
+  grid-template-columns: 7.2916666667vw 1fr;
+}
+
+aside {
+  grid-area: A;
+}
+
+main {
+  grid-area: M;
+  background-image: url("./assets/svg/bg.svg");
+}
+
+header {
+  grid-area: H;
+  display: grid;
+}
+header .logo {
+  width: 19.2708333333vw;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3.3854166667vw;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.5729166667vw;
+  line-height: 1.0416666667vw;
+  color: #2A2A2A;
+  letter-spacing: 0.02em;
+}
+header .logo img {
+  width: 11.09375vw;
+}
+header .header-nav {
+  display: flex;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.5729166667vw;
+  line-height: 1.0416666667vw;
+  color: #2A2A2A;
+  letter-spacing: 0.02em;
+  align-items: center;
+}
+header .header-nav nav {
+  display: flex;
+}
+header .header-nav nav .header-nav-items {
+  margin-right: 2.96875vw;
+  display: flex;
+}
+header .menu {
+  display: flex;
+  justify-content: space-between;
+}
+header .menu .menu-item {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.625vw;
+  line-height: 0.8333333333vw;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2A2A2A;
+}/*# sourceMappingURL=style.css.map */
