@@ -29,9 +29,20 @@
   color: #2A2A2A;
 }
 
+@mixin bullets-items () {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: vw(17);
+  line-height: vw(27);
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -53,6 +64,8 @@ main {
 header {
   grid-area: H;
   display: grid;
+  gap: 22px;
+  height: 125px;
 
   .logo {
     width: vw(370);
@@ -67,29 +80,149 @@ header {
   }
 
   .header-nav {
+    width: vw(1642);
     display: flex;
+    // justify-content: space-between;
     @include header-font();
     align-items: center;
 
-    nav {
+    .header-nav {
       display: flex;
 
       .header-nav-items {
         margin-right: vw(57);
         display: flex;
+        vertical-align: bottom;
+
+        .messengers {
+          display: flex;
+        }
+
       }
     }
   }
-  .menu{
-  display: flex;
-  justify-content: space-between;
-  .menu-item{
-    @include  menu-font();
-  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: vw(1642);
+
+    .menu-item {
+      @include menu-font();
+    }
   }
 }
 
+main {
 
+  .information {
+    margin: 125px vw(115);
+    display: grid;
+    width: vw(1011);
+    height: vw(506);
+    justify-content: space-between;
+
+    .main-information {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 400;
+      font-size: vw(65);
+      line-height: vw(95);
+
+
+      letter-spacing: 0.02em;
+
+      color: #FFFFFF;
+    }
+
+    .secondary-information {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 400;
+      font-size: vw(27);
+      line-height: vw(45);
+      letter-spacing: 0.02em;
+
+      color: #FFFFFF;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      .button-calc {
+        width: vw(400);
+        border-radius: vw(500);
+        background-color: #FD2016;
+        display: flex;
+        height: vw(100 );
+        justify-content: center;
+       
+
+        div {
+          font-family: 'Manrope';
+          font-style: normal;
+          font-weight: 600;
+          font-size: vw(16 );
+          line-height: vw(24 );
+          /* or 150% */
+
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 0.04em;
+        
+          color: #FFFFFF;
+        }
+      }
+
+      .button-whatsupp {
+        width: vw(400);
+        border-radius: vw(500);
+        border: 1px solid #FFFFFF;
+        height: vw(100 );
+        display: flex;
+        // padding: vw(25) vw(54);
+        div{
+          font-family: 'Manrope';
+          font-style: normal;
+          font-weight: 600;
+          font-size: vw(16 );
+          line-height: vw(24 );
+          /* or 150% */
+
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 0.04em;
+        
+          color: #FFFFFF;
+        }
+      }
+
+      .button-calc:hover {
+        .arrow-1 img {
+          transform: rotate(45deg);
+        }
+
+
+
+
+      }
+
+    }
+  }
+
+  .bullets {
+    width: vw(1524);
+    margin: 0 auto;
+    display: flex;
+
+    .bullets-item {
+      @include bullets-items();
+    }
+  }
+
+}
 
 @media (min-width: 993px) {}
 

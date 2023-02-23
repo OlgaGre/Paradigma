@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,6 +26,8 @@ main {
 header {
   grid-area: H;
   display: grid;
+  gap: 22px;
+  height: 125px;
 }
 header .logo {
   width: 19.2708333333vw;
@@ -43,6 +46,7 @@ header .logo img {
   width: 11.09375vw;
 }
 header .header-nav {
+  width: 85.5208333333vw;
   display: flex;
   font-family: "Manrope";
   font-style: normal;
@@ -53,16 +57,21 @@ header .header-nav {
   letter-spacing: 0.02em;
   align-items: center;
 }
-header .header-nav nav {
+header .header-nav .header-nav {
   display: flex;
 }
-header .header-nav nav .header-nav-items {
+header .header-nav .header-nav .header-nav-items {
   margin-right: 2.96875vw;
+  display: flex;
+  vertical-align: bottom;
+}
+header .header-nav .header-nav .header-nav-items .messengers {
   display: flex;
 }
 header .menu {
   display: flex;
   justify-content: space-between;
+  width: 85.5208333333vw;
 }
 header .menu .menu-item {
   font-family: "Manrope";
@@ -73,4 +82,92 @@ header .menu .menu-item {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #2A2A2A;
+}
+
+main .information {
+  margin: 125px 5.9895833333vw;
+  display: grid;
+  width: 52.65625vw;
+  height: 26.3541666667vw;
+  justify-content: space-between;
+}
+main .information .main-information {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.3854166667vw;
+  line-height: 4.9479166667vw;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+main .information .secondary-information {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 2.34375vw;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+main .information .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+main .information .buttons .button-calc {
+  width: 20.8333333333vw;
+  border-radius: 26.0416666667vw;
+  background-color: #FD2016;
+  display: flex;
+  height: 5.2083333333vw;
+  justify-content: center;
+}
+main .information .buttons .button-calc div {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8333333333vw;
+  line-height: 1.25vw;
+  /* or 150% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+main .information .buttons .button-whatsupp {
+  width: 20.8333333333vw;
+  border-radius: 26.0416666667vw;
+  border: 1px solid #FFFFFF;
+  height: 5.2083333333vw;
+  display: flex;
+}
+main .information .buttons .button-whatsupp div {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8333333333vw;
+  line-height: 1.25vw;
+  /* or 150% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+main .information .buttons .button-calc:hover .arrow-1 img {
+  transform: rotate(45deg);
+}
+main .bullets {
+  width: 79.375vw;
+  margin: 0 auto;
+  display: flex;
+}
+main .bullets .bullets-item {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8854166667vw;
+  line-height: 1.40625vw;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */
