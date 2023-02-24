@@ -54,18 +54,50 @@ body {
 
 aside {
   grid-area: A;
+
+  .vertical {
+    transform: rotate(-90deg);
+    font-family: 'Porsche Next Arabic TT';
+    font-style: normal;
+    font-weight: 700;
+    font-size: vw(16);
+    line-height: vw(25);
+    margin-top: vw(169 );
+    align-items: center;
+    letter-spacing: 0.1em;
+    color: #EFEFEF;
+
+  }
+  .line-in-aside{
+    width: 50%;
+    // background-color: #FD2016;
+    height: vw(488 );
+  margin-top: vw(80 );
+  border-right: #EFEFEF vw(1 ) solid;
+  }
+  .aside-img{
+    width: vw(18 );
+   margin: vw(40) vw(57 );
+  }
 }
 
 main {
   grid-area: M;
   background-image: url('./assets/svg/bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 header {
   grid-area: H;
   display: grid;
   gap: 22px;
-  height: 125px;
+
+  .header-wrapper {
+    height: vw(125);
+    margin-top: vw(22);
+    justify-content: space-between;
+  }
 
   .logo {
     width: vw(370);
@@ -82,7 +114,6 @@ header {
   .header-nav {
     width: vw(1642);
     display: flex;
-    // justify-content: space-between;
     @include header-font();
     align-items: center;
 
@@ -94,8 +125,20 @@ header {
         display: flex;
         vertical-align: bottom;
 
+        .header-nav-items-img {
+          width: vw(35);
+        }
+
+        #point-img {
+          width: vw(12);
+        }
+
         .messengers {
           display: flex;
+
+          .messager-img {
+            width: vw(35);
+          }
         }
 
       }
@@ -116,7 +159,7 @@ header {
 main {
 
   .information {
-    margin: 125px vw(115);
+    margin: vw(125) vw(115);
     display: grid;
     width: vw(1011);
     height: vw(506);
@@ -148,29 +191,31 @@ main {
 
     .buttons {
       display: flex;
-      justify-content: space-around;
+      width: vw(822);
+      justify-content: space-between;
+
       .button-calc {
         width: vw(400);
         border-radius: vw(500);
         background-color: #FD2016;
         display: flex;
-        height: vw(100 );
+        height: vw(100);
         justify-content: center;
-       
+
 
         div {
           font-family: 'Manrope';
           font-style: normal;
           font-weight: 600;
-          font-size: vw(16 );
-          line-height: vw(24 );
+          font-size: vw(16);
+          line-height: vw(24);
           /* or 150% */
 
           display: flex;
           align-items: center;
           text-align: center;
           letter-spacing: 0.04em;
-        
+
           color: #FFFFFF;
         }
       }
@@ -178,23 +223,25 @@ main {
       .button-whatsupp {
         width: vw(400);
         border-radius: vw(500);
-        border: 1px solid #FFFFFF;
-        height: vw(100 );
+        border: vw(1) solid #FFFFFF;
+        height: vw(100);
         display: flex;
-        // padding: vw(25) vw(54);
-        div{
+        justify-content: center;
+
+
+        div {
           font-family: 'Manrope';
           font-style: normal;
           font-weight: 600;
-          font-size: vw(16 );
-          line-height: vw(24 );
+          font-size: vw(16);
+          line-height: vw(24);
           /* or 150% */
 
           display: flex;
           align-items: center;
           text-align: center;
           letter-spacing: 0.04em;
-        
+
           color: #FFFFFF;
         }
       }
@@ -203,10 +250,11 @@ main {
         .arrow-1 img {
           transform: rotate(45deg);
         }
+      }
 
-
-
-
+      .button-img {
+        width: vw(30);
+        margin: vw(14);
       }
 
     }
@@ -215,12 +263,22 @@ main {
   .bullets {
     width: vw(1524);
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
 
     .bullets-item {
+      margin-left: vw(95);
+
       @include bullets-items();
     }
+
+    .bullets-item:not(:last-child) {
+      border-right: #FFFFFF 1px solid;
+    }
   }
+
+
 
 }
 

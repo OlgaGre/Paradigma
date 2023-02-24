@@ -17,17 +17,45 @@ body {
 aside {
   grid-area: A;
 }
+aside .vertical {
+  transform: rotate(-90deg);
+  font-family: "Porsche Next Arabic TT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8333333333vw;
+  line-height: 1.3020833333vw;
+  margin-top: 8.8020833333vw;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #EFEFEF;
+}
+aside .line-in-aside {
+  width: 50%;
+  height: 25.4166666667vw;
+  margin-top: 4.1666666667vw;
+  border-right: #EFEFEF 0.0520833333vw solid;
+}
+aside .aside-img {
+  width: 0.9375vw;
+  margin: 2.0833333333vw 2.96875vw;
+}
 
 main {
   grid-area: M;
   background-image: url("./assets/svg/bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 header {
   grid-area: H;
   display: grid;
   gap: 22px;
-  height: 125px;
+}
+header .header-wrapper {
+  height: 6.5104166667vw;
+  margin-top: 1.1458333333vw;
+  justify-content: space-between;
 }
 header .logo {
   width: 19.2708333333vw;
@@ -65,8 +93,17 @@ header .header-nav .header-nav .header-nav-items {
   display: flex;
   vertical-align: bottom;
 }
+header .header-nav .header-nav .header-nav-items .header-nav-items-img {
+  width: 1.8229166667vw;
+}
+header .header-nav .header-nav .header-nav-items #point-img {
+  width: 0.625vw;
+}
 header .header-nav .header-nav .header-nav-items .messengers {
   display: flex;
+}
+header .header-nav .header-nav .header-nav-items .messengers .messager-img {
+  width: 1.8229166667vw;
 }
 header .menu {
   display: flex;
@@ -85,7 +122,7 @@ header .menu .menu-item {
 }
 
 main .information {
-  margin: 125px 5.9895833333vw;
+  margin: 6.5104166667vw 5.9895833333vw;
   display: grid;
   width: 52.65625vw;
   height: 26.3541666667vw;
@@ -111,7 +148,8 @@ main .information .secondary-information {
 }
 main .information .buttons {
   display: flex;
-  justify-content: space-around;
+  width: 42.8125vw;
+  justify-content: space-between;
 }
 main .information .buttons .button-calc {
   width: 20.8333333333vw;
@@ -137,9 +175,10 @@ main .information .buttons .button-calc div {
 main .information .buttons .button-whatsupp {
   width: 20.8333333333vw;
   border-radius: 26.0416666667vw;
-  border: 1px solid #FFFFFF;
+  border: 0.0520833333vw solid #FFFFFF;
   height: 5.2083333333vw;
   display: flex;
+  justify-content: center;
 }
 main .information .buttons .button-whatsupp div {
   font-family: "Manrope";
@@ -157,12 +196,18 @@ main .information .buttons .button-whatsupp div {
 main .information .buttons .button-calc:hover .arrow-1 img {
   transform: rotate(45deg);
 }
+main .information .buttons .button-img {
+  width: 1.5625vw;
+  margin: 0.7291666667vw;
+}
 main .bullets {
   width: 79.375vw;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 main .bullets .bullets-item {
+  margin-left: 4.9479166667vw;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 300;
@@ -170,4 +215,7 @@ main .bullets .bullets-item {
   line-height: 1.40625vw;
   letter-spacing: 0.02em;
   color: #FFFFFF;
+}
+main .bullets .bullets-item:not(:last-child) {
+  border-right: #FFFFFF 1px solid;
 }/*# sourceMappingURL=style.css.map */
