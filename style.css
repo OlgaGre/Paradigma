@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Manrope";
   src: url(./assets/fonts/Manrope-Regular.ttf);
@@ -6,6 +7,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
 }
 
 body {
@@ -85,6 +89,10 @@ header .header-nav {
   letter-spacing: 0.02em;
   align-items: center;
 }
+header .header-nav .underline {
+  -webkit-text-decoration: underline dotted red ж;
+          text-decoration: underline dotted red ж;
+}
 header .header-nav .header-nav {
   display: flex;
 }
@@ -151,6 +159,35 @@ main .information .buttons {
   width: 42.8125vw;
   justify-content: space-between;
 }
+main .information .buttons .button-calc .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  transform: skewX(-45deg);
+  -webkit-animation: flareAnimation;
+          animation: flareAnimation;
+  left: -150%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  -webkit-animation: flareAnimation 3s infinite linear;
+          animation: flareAnimation 3s infinite linear;
+}
+@-webkit-keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+@keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
 main .information .buttons .button-calc {
   width: 20.8333333333vw;
   border-radius: 26.0416666667vw;
@@ -158,6 +195,8 @@ main .information .buttons .button-calc {
   display: flex;
   height: 5.2083333333vw;
   justify-content: center;
+  position: relative;
+  overflow-x: hidden;
 }
 main .information .buttons .button-calc div {
   font-family: "Manrope";
@@ -192,6 +231,9 @@ main .information .buttons .button-whatsupp div {
   text-align: center;
   letter-spacing: 0.04em;
   color: #FFFFFF;
+}
+main .information .buttons .button-calc:hover {
+  background-color: red;
 }
 main .information .buttons .button-calc:hover .arrow-1 img {
   transform: rotate(45deg);

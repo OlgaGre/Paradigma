@@ -43,6 +43,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+  }
+
 }
 
 body {
@@ -62,22 +67,24 @@ aside {
     font-weight: 700;
     font-size: vw(16);
     line-height: vw(25);
-    margin-top: vw(169 );
+    margin-top: vw(169);
     align-items: center;
     letter-spacing: 0.1em;
     color: #EFEFEF;
 
   }
-  .line-in-aside{
+
+  .line-in-aside {
     width: 50%;
     // background-color: #FD2016;
-    height: vw(488 );
-  margin-top: vw(80 );
-  border-right: #EFEFEF vw(1 ) solid;
+    height: vw(488);
+    margin-top: vw(80);
+    border-right: #EFEFEF vw(1) solid;
   }
-  .aside-img{
-    width: vw(18 );
-   margin: vw(40) vw(57 );
+
+  .aside-img {
+    width: vw(18);
+    margin: vw(40) vw(57);
   }
 }
 
@@ -116,6 +123,11 @@ header {
     display: flex;
     @include header-font();
     align-items: center;
+
+    .underline {
+
+      text-decoration: underline dotted red ж
+    }
 
     .header-nav {
       display: flex;
@@ -193,14 +205,38 @@ main {
       display: flex;
       width: vw(822);
       justify-content: space-between;
+    }
 
-      .button-calc {
-        width: vw(400);
-        border-radius: vw(500);
-        background-color: #FD2016;
-        display: flex;
-        height: vw(100);
-        justify-content: center;
+    .button-calc {
+      width: vw(400);
+      border-radius: vw(500);
+      background-color: #FD2016;
+      display: flex;
+      height: vw(100);
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+
+      .flare {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 45px;
+        transform: skewX(-45deg); // Наклон
+        animation: flareAnimation;
+        left: -150%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+        animation: flareAnimation 3s infinite linear; // Время и тип анимации можно менять
+      }
+
+      @keyframes flareAnimation {
+        0% {
+          left: -150%;
+        }
+
+        100% {
+          left: 150%;
+        }
 
 
         div {
@@ -247,6 +283,8 @@ main {
       }
 
       .button-calc:hover {
+        background-color: red;
+
         .arrow-1 img {
           transform: rotate(45deg);
         }
